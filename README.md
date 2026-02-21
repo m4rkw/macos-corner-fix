@@ -90,11 +90,3 @@ launchctl load ~/Library/LaunchAgents/com.local.dyld-inject.plist
 launchctl unload ~/Library/LaunchAgents/com.local.dyld-inject.plist
 rm -f /usr/local/lib/SafariCornerTweak.dylib
 ```
-
-## Re-enable SIP When Done
-
-1. Shut down your Mac
-2. Hold the power button to boot into Recovery Mode
-3. Open Terminal from the Utilities menu
-4. Run: `csrutil enable`
-5. Reboot
