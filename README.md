@@ -46,12 +46,14 @@ codesign -f -s - SafariCornerTweak.dylib
 
 3. Install
 
-```sudo cp SafariCornerTweak.dylib /usr/local/lib/
+```bash
+sudo cp SafariCornerTweak.dylib /usr/local/lib/
 ```
 
 ## Launch an app with the fix
 
-```DYLD_INSERT_LIBRARIES=/usr/local/lib/SafariCornerTweak.dylib \
+```bash
+DYLD_INSERT_LIBRARIES=/usr/local/lib/SafariCornerTweak.dylib \
     /Applications/Safari/MacOS/Contents/Safari
 ```
 
@@ -63,17 +65,19 @@ immediately with `launchctl unsetenv`.
 
 1. Install the launch agent:
 
-```cp com.local.dyld-inject.plist ~/Library/LaunchAgents/com.local.dyld-inject.plist
+```bash
+cp com.local.dyld-inject.plist ~/Library/LaunchAgents/com.local.dyld-inject.plist
 ```
 
 2. Activate it
 
-```launchctl load ~/Library/LaunchAgents/com.local.dyld-inject.plist
+```bash
+launchctl load ~/Library/LaunchAgents/com.local.dyld-inject.plist
 ```
 
 ## Uninstall
 
-```
+```bash
 launchctl unload ~/Library/LaunchAgents/com.local.dyld-inject.plist
 rm -f /usr/local/lib/SafariCornerTweak.dylib
 ```
