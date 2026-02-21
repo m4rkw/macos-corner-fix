@@ -4,6 +4,15 @@
 
 Reduces macOS window corner radius from 16.0 (Tahoe default) to 10.0 (matching Sequoia / macOS 15).
 
+## Why
+
+I couldn't cope with the corners anymore. I don't like disabling SIP but the
+corners are too much. Please for the love of glob() fix this Apple.
+
+## Screenshot
+
+![Screenshot description](screenshot.png)
+
 ## Prerequisites
 
 - SIP must be disabled for this to work on macOS core apps (eg Safari)
