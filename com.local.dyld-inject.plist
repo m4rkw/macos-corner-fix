@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.local.dyld-inject</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>launchctl</string>
+    <string>setenv</string>
+    <string>DYLD_INSERT_LIBRARIES</string>
+    <string>/usr/local/lib/SafariCornerTweak.dylib</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+</dict>
+</plist>
