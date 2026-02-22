@@ -1,6 +1,6 @@
 # macOS Window Corner Radius Tweak
 
-**macOS Tahoe (16) — Darwin 25.x — Apple Silicon**
+**macOS Tahoe (16) — Darwin 25.x — Apple Silicon & Intel (Rosetta 2)**
 
 Reduces macOS window corner radius from 16.0 (Tahoe default) to 10.0 (matching Sequoia / macOS 15).
 
@@ -42,7 +42,7 @@ Edit `kDesiredCornerRadius` in `SafariCornerTweak.m`, then recompile and re-sign
 1. Compile
 
 ```bash
-clang -arch arm64e -dynamiclib -framework AppKit \
+clang -arch arm64e -arch x86_64 -dynamiclib -framework AppKit \
   -o SafariCornerTweak.dylib \
   SafariCornerTweak.m
 ```
