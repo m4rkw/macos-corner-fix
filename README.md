@@ -47,16 +47,16 @@ clang -arch arm64e -arch x86_64 -dynamiclib -framework AppKit \
   SafariCornerTweak.m
 ```
 
-2. Sign
-
-```bash
-codesign -f -s - SafariCornerTweak.dylib
-```
-
-3. Install
+2. Install
 
 ```bash
 sudo cp SafariCornerTweak.dylib /usr/local/lib/
+```
+
+3. Sign
+
+```bash
+sudo codesign -f -s - SafariCornerTweak.dylib
 ```
 
 ## Launch an app with the fix

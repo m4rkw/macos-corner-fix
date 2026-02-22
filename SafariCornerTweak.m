@@ -21,6 +21,9 @@ static CGSize swizzled_bottomCornerSize(id self, SEL _cmd) {
 
 __attribute__((constructor))
 static void init(void) {
+    // Only apply to GUI apps; skip CLI tools and daemons
+    if (![[NSBundle mainBundle] bundleIdentifier]) return;
+
     Class cls = NSClassFromString(@"NSThemeFrame");
     if (!cls) return;
 
@@ -35,6 +38,4 @@ static void init(void) {
 
     Method m4 = class_getInstanceMethod(cls, @selector(_bottomCornerSize));
     if (m4) method_setImplementation(m4, (IMP)swizzled_bottomCornerSize);
-
-    NSLog(@"[CornerTweak] Swizzled NSThemeFrame corner radius to %.1f", kDesiredCornerRadius);
 }
