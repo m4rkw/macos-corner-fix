@@ -56,7 +56,7 @@ sudo cp SafariCornerTweak.dylib /usr/local/lib/
 3. Sign
 
 ```bash
-sudo codesign -f -s - SafariCornerTweak.dylib
+sudo codesign -f -s - /usr/local/lib/SafariCornerTweak.dylib
 ```
 
 ## Launch an app with the fix
