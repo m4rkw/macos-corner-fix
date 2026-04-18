@@ -26,6 +26,14 @@ corners are too much. Please for the love of glob() fix this Apple.
 4. Run: `csrutil disable`
 5. Reboot
 
+## Disable AMFI
+
+If you want this to work with Safari:
+
+```
+nvram boot-args="amfi_get_out_of_my_way=1"
+```
+
 ## Adjusting the Radius
 
 Edit `kDesiredCornerRadius` in `SafariCornerTweak.m`, then recompile and re-sign.
